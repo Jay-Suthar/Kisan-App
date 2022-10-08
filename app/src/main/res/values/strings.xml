@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Kisna_App</string>
     <string name="kisan">KISAN</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
 
 </resources>
