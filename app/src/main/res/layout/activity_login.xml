@@ -106,17 +106,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/login_btn"
+        android:id="@+id/register_btn"
         android:layout_width="309dp"
         android:layout_height="53dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/main_color"
-        android:text="Button"
+        android:text="@string/login"
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#870D0D" />
+        app:rippleColor="#870D0D"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
         android:id="@+id/textView8"
