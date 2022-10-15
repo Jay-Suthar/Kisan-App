@@ -11,6 +11,7 @@
     <color name="main_bg_color">#EBFFDE</color>
     <color name="input_text_color">#645C5C</color>
     <color name="secondary_bg_color">#B9D9AD</color>
-
+    <color name="main_bg_color_2">#B9D9AD</color>
+    <color name="cancel">#F32727</color>
 
 </resources>
