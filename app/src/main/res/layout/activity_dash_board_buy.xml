@@ -66,6 +66,7 @@
           android:layout_height="152dp"
           android:layout_marginStart="15dp"
           android:background="@color/secondary_bg_color"
+          android:onClick="onClick_goto_buy_seeds"
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="parent">

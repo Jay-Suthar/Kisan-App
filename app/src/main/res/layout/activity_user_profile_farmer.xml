@@ -22,6 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_foreground"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
@@ -269,6 +270,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView64"
                     app:layout_constraintVertical_bias="1.0" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <Button
                 android:id="@+id/user_profile_edit_profile"
                 android:layout_width="300dp"
@@ -277,8 +279,9 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="@color/main_color"
-                android:text="Update Profile"
+                android:onClick="onClick_goto_update_profile"
 
+                android:text="Update Profile"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -292,6 +295,7 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="12dp"
                 android:backgroundTint="@color/main_color"
+                android:onClick="onClick_goto_update_password"
                 android:text="Change Password"
                 app:layout_constraintBottom_toTopOf="@+id/user_profile_edit_profile"
                 app:layout_constraintEnd_toEndOf="parent"

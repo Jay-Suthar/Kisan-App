@@ -39,7 +39,8 @@
             android:backgroundTint="#000000"
             android:ems="10"
             android:hint="Name of your crop"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,6 +68,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_launcher_foreground"
                 tools:src="@tools:sample/avatars" />
 
             <LinearLayout
@@ -117,7 +119,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="@color/main_color"
-                        android:text="Modify" />
+                        android:onClick="onClick_goto_update_crop"
+                        android:text="Modify"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <Button
                         android:id="@+id/button3"
@@ -125,7 +129,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="@color/main_color"
-                        android:text="View Details" />
+                        android:onClick="onClick_goto_detail_crop"
+                        android:text="View Details"
+                        tools:ignore="TouchTargetSizeCheck" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -144,6 +150,7 @@
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:onClick="onClick_goto_add_crop"
             android:src="@drawable/plus" />
     </androidx.cardview.widget.CardView>
 
