@@ -13,6 +13,7 @@
         android:theme="@style/Theme.Kisna_App"
         tools:targetApi="31">
         <activity
+            android:name=".OrderStatusActivity"
             android:name=".farmer_product_details"
             android:exported="false">
             <meta-data
@@ -20,6 +21,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".BuySeedsTomatoActivity"
             android:name=".update_password_farmer"
             android:exported="false">
             <meta-data
@@ -27,6 +29,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".BuySeedsActivity"
             android:name=".update_user_profile_farmer"
             android:exported="false">
             <meta-data
@@ -34,6 +37,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".activity_farmer_seed"
             android:name=".user_profile_farmer"
             android:exported="false">
             <meta-data
@@ -41,6 +45,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".CustomerDashboardActivity"
             android:name=".farmer_crop_add"
             android:exported="false">
             <meta-data
@@ -48,6 +53,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".DashBoardBuyActivity"
             android:name=".farmer_crop_details"
             android:exported="false">
             <meta-data
@@ -55,6 +61,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".DashboardSellActivity"
             android:name=".FarmerCropUpdateActivity"
             android:exported="false">
             <meta-data
@@ -62,6 +69,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".RoleActivity"
             android:name=".Navigation_Activity"
             android:exported="false">
             <meta-data
