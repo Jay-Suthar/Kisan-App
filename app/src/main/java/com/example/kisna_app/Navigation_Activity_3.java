@@ -19,14 +19,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class Navigation_Activity extends AppCompatActivity {
+public class Navigation_Activity_3 extends AppCompatActivity {
     private ConstraintLayout logout;
     private TextView name;
     private ImageView prof_img;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation);
+        setContentView(R.layout.activity_navigation3);
         logout = findViewById(R.id.nav_logout);
         name = findViewById(R.id.nav_username);
         prof_img = findViewById(R.id.nav_profile_img);
@@ -46,44 +46,20 @@ public class Navigation_Activity extends AppCompatActivity {
 
             }
         });
-
-
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
-                Toast.makeText(Navigation_Activity.this, "Logged Out Syccessfully", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Navigation_Activity.this,User_LoginActivity.class));
+                Toast.makeText(Navigation_Activity_3.this, "Logged Out Syccessfully", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Navigation_Activity_3.this,User_LoginActivity.class));
                 finish();
             }
         });
-
         prof_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Navigation_Activity.this,user_profile_farmer.class));
+                startActivity(new Intent(Navigation_Activity_3.this,user_profile_farmer.class));
             }
         });
-
     }
-
-    public void onClick_goto_buy_dashboard(View view)
-    {
-        Intent lgn = new Intent(Navigation_Activity.this,DashBoardBuyActivity.class);
-        startActivity(lgn);
-    }
-
-    public void onClick_goto_sell_dashboard(View view)
-    {
-        Intent lgn1 = new Intent(Navigation_Activity.this,DashboardSellActivity.class);
-        startActivity(lgn1);
-    }
-
-    public void onClick_goto_my_orders(View view)
-    {
-        Intent lgn2 = new Intent(Navigation_Activity.this,OrderStatusActivity.class);
-        startActivity(lgn2);
-    }
-
-
 }

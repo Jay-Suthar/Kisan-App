@@ -23,14 +23,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout11"
+        android:id="@+id/cns_role_farmer"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="55dp"
         android:layout_marginEnd="32dp"
         android:background="@color/main_color"
-        android:onClick="onClick_goto_Nav"
+        android:tag="farmer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,18 +68,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout12"
+        android:id="@+id/cns_role_customer"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="32dp"
         android:background="@color/main_color"
-        android:onClick="onClick_goto_customer"
+        android:tag="customer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout11">
+        app:layout_constraintTop_toBottomOf="@+id/cns_role_farmer">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView1"
@@ -113,16 +113,18 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cns_role_vendor"
         android:layout_width="0dp"
         android:layout_height="75dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="32dp"
         android:background="@color/main_color"
+        android:tag="vendor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+        app:layout_constraintTop_toBottomOf="@+id/cns_role_customer">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView2"
@@ -161,6 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="50dp"
         android:backgroundTint="@color/main_color"
+        android:onClick="proceed"
         android:text="Proceed"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
