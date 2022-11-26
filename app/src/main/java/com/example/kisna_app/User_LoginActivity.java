@@ -1,28 +1,28 @@
 package com.example.kisna_app;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+        import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Patterns;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+        import android.content.Intent;
+        import android.os.Bundle;
+        import android.text.TextUtils;
+        import android.util.Patterns;
+        import android.view.View;
+        import android.widget.Button;
+        import android.widget.EditText;
+        import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+        import com.google.android.gms.tasks.OnSuccessListener;
+        import com.google.firebase.auth.AuthResult;
+        import com.google.firebase.auth.FirebaseAuth;
+        import com.google.firebase.auth.FirebaseUser;
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseError;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+        import com.google.firebase.database.ValueEventListener;
 
-public class LoginActivity extends AppCompatActivity {
+public class User_LoginActivity extends AppCompatActivity {
 
     private EditText email,pass;
     private Button login;
@@ -48,12 +48,12 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(TextUtils.isEmpty(email_login) || TextUtils.isEmpty(pass_login))
                 {
-                    Toast.makeText(LoginActivity.this, "Please fill the details", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(User_LoginActivity.this, "Please fill the details", Toast.LENGTH_SHORT).show();
                 }
 
-                else if(Patterns.EMAIL_ADDRESS.matcher(email_login).matches())
+                else if(!Patterns.EMAIL_ADDRESS.matcher(email_login).matches())
                 {
-                    Toast.makeText(LoginActivity.this, "Write valid email address", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(User_LoginActivity.this, "Write valid email address", Toast.LENGTH_SHORT).show();
                 }
 
                 else
@@ -70,26 +70,26 @@ public class LoginActivity extends AppCompatActivity {
             public void onSuccess(AuthResult authResult) {
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String id = user.getUid();
-                df.child("User").child("Farmer").child(id).child("role").addValueEventListener(new ValueEventListener() {
+                df.child("User").child(id).child("role").addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         role = snapshot.getValue(String.class);
                         if(role.equals("farmer"))
                         {
-                            startActivity(new Intent(LoginActivity.this,Navigation_Activity.class));
+                            startActivity(new Intent(User_LoginActivity.this,Navigation_Activity.class));
                             finish();
                         }
                         else if(role.equals("customer"))
                         {
-                            startActivity(new Intent(LoginActivity.this,OrderStatusActivity.class));
+                            startActivity(new Intent(User_LoginActivity.this,Navigation_Activity_2.class));
                             finish();
                         }
                         else if(role.equals("vendor"))
                         {
-                            startActivity(new Intent(LoginActivity.this,OrderStatusActivity.class));
+                            startActivity(new Intent(User_LoginActivity.this,Navigation_Activity_3.class));
                             finish();
                         }
-                        Toast.makeText(LoginActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(User_LoginActivity.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onClick_goto_register(View view)
     {
-        Intent lgn = new Intent(LoginActivity.this,RegisterActivity.class);
+        Intent lgn = new Intent(User_LoginActivity.this,RoleActivity.class);
         startActivity(lgn);
     }
 }
