@@ -21,6 +21,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Navigation_Activity_3 extends AppCompatActivity {
     private ConstraintLayout logout;
+    private ConstraintLayout sellbtn;
     private TextView name;
     private ImageView prof_img;
     @Override
@@ -30,6 +31,7 @@ public class Navigation_Activity_3 extends AppCompatActivity {
         logout = findViewById(R.id.nav_logout);
         name = findViewById(R.id.nav_username);
         prof_img = findViewById(R.id.nav_profile_img);
+        sellbtn = findViewById(R.id.nav_sell);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String id = user.getUid();
@@ -61,5 +63,14 @@ public class Navigation_Activity_3 extends AppCompatActivity {
                 startActivity(new Intent(Navigation_Activity_3.this,user_profile_farmer.class));
             }
         });
+
+        sellbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Navigation_Activity_3.this,VendorAddActivity.class));
+            }
+        });
     }
+
+
 }

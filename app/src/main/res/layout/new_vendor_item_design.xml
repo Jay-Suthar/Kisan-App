@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#B9D9AD"
+        android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerVertical="true"
+            android:id="@+id/prof_img_seed"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_seed"
+            android:text="Crop Name"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:layout_marginLeft="50dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/subtype_seed"
+            android:text="Crop Name"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:layout_below="@+id/name_seed"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="50dp"></TextView>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_seed"
+            android:text="10"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:layout_below="@+id/subtype_seed"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"></TextView>
+
+        <TextView
+            android:id="@+id/price_crop11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtype_seed"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:text="Rs. "
+            android:textColor="#000"
+            android:textSize="15sp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quantity_seed"
+            android:text="20"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:layout_below="@+id/price_seed"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="115dp"></TextView>
+
+        <TextView
+            android:id="@+id/quantity_crop11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/price_seed"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:text="Quantity:"
+            android:textColor="#000"
+            android:textSize="15sp"></TextView>
+
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edit_seed"
+            android:text="Update"
+            android:textSize="15sp"
+            android:layout_below="@+id/quantity_seed"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="#12450D"></Button>
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/delete_seed"
+            android:text="Delete"
+            android:textSize="15sp"
+            android:layout_below="@+id/edit_seed"
+            android:layout_toRightOf="@+id/prof_img_seed"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="#F32727"></Button>
+
+
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
