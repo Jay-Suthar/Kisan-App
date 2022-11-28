@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "852058930410",
+    "project_id": "kisanapp-3b07e",
+    "storage_bucket": "kisanapp-3b07e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852058930410:android:0077bd22cf22c6abce2b93",
+        "android_client_info": {
+          "package_name": "com.example.kisna_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "852058930410-vlh1h7p1o8nqjfg5jqfsm1ncmav6da76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmiHUl0ud6CHM-tdkwj_fNZFCbUOKymjE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "852058930410-vlh1h7p1o8nqjfg5jqfsm1ncmav6da76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
