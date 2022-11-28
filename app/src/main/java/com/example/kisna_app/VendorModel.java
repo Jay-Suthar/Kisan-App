@@ -1,16 +1,17 @@
 package com.example.kisna_app;
 
 public class VendorModel {
-    private String name_seed,sub_type_seed,price_seed,quantity_seed;
+    private String name_seed,sub_type_seed,price_seed,quantity_seed,parent_vendor;
 
     public VendorModel() {
     }
 
-    public VendorModel(String name_seed, String sub_type_seed, String price_seed, String quantity_seed) {
+    public VendorModel(String name_seed, String sub_type_seed, String price_seed, String quantity_seed,String parent_vendor) {
         this.name_seed = name_seed;
         this.sub_type_seed = sub_type_seed;
         this.price_seed = price_seed;
         this.quantity_seed = quantity_seed;
+        this.parent_vendor=parent_vendor;
     }
 
     public String getName_seed() {
@@ -43,5 +44,13 @@ public class VendorModel {
 
     public void setQuantity_seed(String quantity_seed) {
         this.quantity_seed = quantity_seed;
+    }
+
+    public String getParent_vendor() {
+        return parent_vendor;
+    }
+
+    public void setParent_vendor(String parent_vendor) {
+        this.parent_vendor = parent_vendor;
     }
 }

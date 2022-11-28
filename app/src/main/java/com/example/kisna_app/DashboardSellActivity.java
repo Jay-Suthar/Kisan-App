@@ -29,6 +29,7 @@ public class DashboardSellActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DashboardSellActivity.this,farmer_crop_add.class));
+                finish();
             }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -55,6 +56,7 @@ public class DashboardSellActivity extends AppCompatActivity {
         super.onStop();
         cropAddAdapter.stopListening();
     }
+
 }
 
 

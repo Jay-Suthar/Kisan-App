@@ -8,15 +8,10 @@ import android.view.View;
 
 public class BuySeedsTomatoActivity extends AppCompatActivity {
 
+    private String main_cat,sub_cat;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buy_seeds_tomato);
-    }
-
-    public void onClick_goto_buy_tomato_seeds_details(View view)
-    {
-        Intent lgn = new Intent(BuySeedsTomatoActivity.this,farmer_product_details.class);
-        startActivity(lgn);
     }
 }

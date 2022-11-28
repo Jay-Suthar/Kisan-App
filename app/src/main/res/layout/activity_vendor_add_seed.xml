@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:text="Add Crop"
+        android:text="Add"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout115"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
@@ -44,14 +44,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/add_crop_name"
+            android:id="@+id/add_seed_name"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="Apple"
+            android:hint="Tomato"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout116"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -75,14 +75,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Sub Type"
+            android:text="Description"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/add_crop_sub_type"
+            android:id="@+id/add_seed_sub_type"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
@@ -99,7 +99,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout117"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -120,7 +120,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/add_crop_price"
+            android:id="@+id/add_seed_price"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
@@ -137,7 +137,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout118"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -158,7 +158,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/add_crop_quantity"
+            android:id="@+id/add_seed_quantity"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
@@ -175,7 +175,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout119"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="82dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -194,48 +194,10 @@
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/crp_img_0"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView44"
-            app:srcCompat="@drawable/add_thin" />
-
-        <ImageView
-            android:id="@+id/crp_img_1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/crp_img_0"
-            app:layout_constraintTop_toBottomOf="@+id/textView44"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/add_thin" />
-
-        <ImageView
-            android:id="@+id/crp_img_2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="23dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/crp_img_1"
-            app:layout_constraintTop_toBottomOf="@+id/textView44"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/add_thin" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/add_crop_cancel"
+        android:id="@+id/add_seed_cancel"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -248,7 +210,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/add_crop_add"
+        android:id="@+id/add_seed_add"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -256,7 +218,7 @@
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/main_color"
         android:text="Add"
-        app:layout_constraintBottom_toTopOf="@+id/add_crop_cancel"
+        app:layout_constraintBottom_toTopOf="@+id/add_seed_cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />

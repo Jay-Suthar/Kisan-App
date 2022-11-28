@@ -15,6 +15,20 @@
         android:theme="@style/Theme.Kisna_App"
         tools:targetApi="31">
         <activity
+            android:name=".VendorAddCategory"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".vendor_add_seed"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".VendorAddActivity"
             android:exported="false">
             <meta-data

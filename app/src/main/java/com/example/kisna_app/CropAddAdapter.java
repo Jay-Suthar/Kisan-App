@@ -77,6 +77,7 @@ public class CropAddAdapter extends FirebaseRecyclerAdapter<CropModel, CropAddAd
 
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         String id = user.getUid();
+                        FirebaseDatabase.getInstance().getReference().child("All_Crops_Veg_Fruits").child(getRef(position).getKey()).updateChildren(map);
                         FirebaseDatabase.getInstance().getReference().child("User")
                                 .child(id).child("Crops").child(getRef(position).getKey()).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -113,7 +114,9 @@ public class CropAddAdapter extends FirebaseRecyclerAdapter<CropModel, CropAddAd
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("User")
-                                .child(id).child("Crops").child(getRef(position).getKey()).removeValue();   //deleting using s1,s2,s3,... as they are unique
+                                .child(id).child("Crops").child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("All_Crops_Veg_Fruits").child(getRef(position).getKey()).removeValue();
+//deleting using s1,s2,s3,... as they are unique
                     }
                 });
                 builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {

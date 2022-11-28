@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Navigation_Activity extends AppCompatActivity {
-    private ConstraintLayout logout;
+    private ConstraintLayout logout,buy;
     private TextView name;
     private ImageView prof_img;
     @Override
@@ -30,6 +30,7 @@ public class Navigation_Activity extends AppCompatActivity {
         logout = findViewById(R.id.nav_logout);
         name = findViewById(R.id.nav_username);
         prof_img = findViewById(R.id.nav_profile_img);
+        buy = findViewById(R.id.nav_buy_seeds);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String id = user.getUid();
@@ -57,7 +58,12 @@ public class Navigation_Activity extends AppCompatActivity {
                 finish();
             }
         });
-
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Navigation_Activity.this,BuySeedsActivity.class));
+            }
+        });
         prof_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,7 +75,7 @@ public class Navigation_Activity extends AppCompatActivity {
 
     public void onClick_goto_buy_dashboard(View view)
     {
-        Intent lgn = new Intent(Navigation_Activity.this,DashBoardBuyActivity.class);
+        Intent lgn = new Intent(Navigation_Activity.this,BuySeedsActivity.class);
         startActivity(lgn);
     }
 

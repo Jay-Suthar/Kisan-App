@@ -31,7 +31,7 @@ public class Navigation_Activity_3 extends AppCompatActivity {
         logout = findViewById(R.id.nav_logout);
         name = findViewById(R.id.nav_username);
         prof_img = findViewById(R.id.nav_profile_img);
-        sellbtn = findViewById(R.id.nav_sell);
+        sellbtn = findViewById(R.id.nav_buy_crops);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String id = user.getUid();

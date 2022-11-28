@@ -1,9 +1,5 @@
 package com.example.kisna_app;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
-import static java.security.AccessController.getContext;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -29,7 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.orhanobut.dialogplus.DialogPlus;
 import com.orhanobut.dialogplus.ViewHolder;
 
-import java.security.AccessControlContext;
 import java.util.HashMap;
 
 public class VendorAddAdapter extends FirebaseRecyclerAdapter<VendorModel, VendorAddAdapter.myViewHolder> {
@@ -51,13 +46,8 @@ public class VendorAddAdapter extends FirebaseRecyclerAdapter<VendorModel, Vendo
         holder.sub_type.setText(model.getSub_type_seed());
         holder.price.setText(model.getPrice_seed());
         holder.quantity.setText(model.getQuantity_seed());
-//        holder.name.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(context, Navigation_Activity_3.class);
-//                context.startActivity(intent);
-//            }
-//        });
+
+
         holder.edit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,6 +82,7 @@ public class VendorAddAdapter extends FirebaseRecyclerAdapter<VendorModel, Vendo
                         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                         String id = user.getUid();
                         String cur_user = getRef(position).getKey();
+                        FirebaseDatabase.getInstance().getReference().child("ALL_SEEDS_MANURE_FERTILIZERS_EQUIPMENT").child(getRef(position).getKey()).updateChildren(map);
                         FirebaseDatabase.getInstance().getReference().child("User")
                                 .child(id).child("Item_details").child(cur_user).updateChildren(map)
                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -128,7 +119,9 @@ public class VendorAddAdapter extends FirebaseRecyclerAdapter<VendorModel, Vendo
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         FirebaseDatabase.getInstance().getReference().child("User")
-                                .child(id).child("Item_details").child(getRef(position).getKey()).removeValue();   //deleting using s1,s2,s3,... as they are unique
+                                .child(id).child("Item_details").child(getRef(position).getKey()).removeValue();
+                        FirebaseDatabase.getInstance().getReference().child("ALL_SEEDS_MANURE_FERTILIZERS_EQUIPMENT").child(getRef(position).getKey()).removeValue();
+                        //deleting using s1,s2,s3,... as they are unique
                     }
                 });
                 builder.setNegativeButton("Exit", new DialogInterface.OnClickListener() {
@@ -171,7 +164,7 @@ public class VendorAddAdapter extends FirebaseRecyclerAdapter<VendorModel, Vendo
             name=itemView.findViewById(R.id.name_seed);
             sub_type=itemView.findViewById(R.id.subtype_seed);
             price=itemView.findViewById(R.id.price_seed);
-            quantity=itemView.findViewById(R.id.quantity_seed);
+            quantity=itemView.findViewById(R.id.quantity_buy);
             edit_btn=itemView.findViewById(R.id.edit_seed);
             delete_btn=itemView.findViewById(R.id.delete_seed);
         }

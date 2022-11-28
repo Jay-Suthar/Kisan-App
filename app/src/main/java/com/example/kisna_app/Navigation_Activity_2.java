@@ -20,7 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Navigation_Activity_2 extends AppCompatActivity {
-    private ConstraintLayout logout;
+    private ConstraintLayout logout,buy_crops;
     private TextView name;
     private ImageView prof_img;
     @Override
@@ -30,6 +30,7 @@ public class Navigation_Activity_2 extends AppCompatActivity {
         logout = findViewById(R.id.nav_logout);
         name = findViewById(R.id.nav_username);
         prof_img = findViewById(R.id.nav_profile_img);
+        buy_crops=findViewById(R.id.nav_buy_crops);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String id = user.getUid();
@@ -55,6 +56,12 @@ public class Navigation_Activity_2 extends AppCompatActivity {
                 finish();
             }
         });
+        buy_crops.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Navigation_Activity_2.this,CustomerDashboardActivity.class));
+            }
+        });
         prof_img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,4 +69,6 @@ public class Navigation_Activity_2 extends AppCompatActivity {
             }
         });
     }
+
+
 }

@@ -18,13 +18,14 @@
 
         <ImageView
             android:id="@+id/detail_crop_image"
-            android:layout_width="107dp"
+            android:layout_width="90dp"
             android:layout_height="90dp"
             android:layout_marginTop="80dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/vendor"
+            tools:srcCompat="@drawable/vendor" />
 
         <TextView
             android:id="@+id/detail_crop_name"
@@ -136,9 +137,10 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+            app:layout_constraintTop_toBottomOf="@+id/textView34"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -179,29 +181,30 @@
             app:layout_constraintTop_toBottomOf="@+id/textView35"
             app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
     <Button
-        android:id="@+id/detail_crop_remove"
+        android:id="@+id/detail_crop_back"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/cancel"
-        android:text="Remove"
+        android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/detail_crop_update"
+        android:id="@+id/detail_crop_order"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/main_color"
-        android:text="Update"
-        app:layout_constraintBottom_toTopOf="@+id/detail_crop_remove"
+        android:text="Order"
+        app:layout_constraintBottom_toTopOf="@+id/detail_crop_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent" />
