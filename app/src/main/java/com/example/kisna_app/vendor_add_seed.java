@@ -46,6 +46,8 @@ public class vendor_add_seed extends AppCompatActivity {
             public void onClick(View view) {
                 updatevalues();
                 clear();
+                startActivity(new Intent(vendor_add_seed.this,VendorAddActivity.class));
+                finish();
             }
         });
 

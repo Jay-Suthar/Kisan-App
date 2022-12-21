@@ -68,7 +68,8 @@
             android:layout_height="35dp"
             app:layout_constraintBottom_toBottomOf="@+id/profileImage"
             app:layout_constraintEnd_toEndOf="@+id/profileImage"
-            tools:srcCompat="@tools:sample/avatars" />
+            app:srcCompat="@drawable/camera_icon"
+            tools:srcCompat="@drawable/camera_icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -93,11 +94,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
-                android:layout_width="381dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -116,7 +117,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:hint="ram"
+                    android:hint="Enter Your Name"
                     android:inputType="textPersonName"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -126,11 +127,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
-                android:layout_width="381dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
@@ -140,7 +141,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:hint="123456789"
+                    android:hint="Enter Your Phone No."
                     android:inputType="phone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -160,11 +161,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout5"
-                android:layout_width="381dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
@@ -183,7 +184,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:hint="1234 5678 9998"
+                    android:hint="Enter Your Adhar"
                     android:inputType="numberSigned"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -194,11 +195,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout6"
-                android:layout_width="381dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout5">
@@ -217,7 +218,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:hint="M.p"
+                    android:hint="State"
                     android:inputType="textPersonName"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -227,11 +228,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout7"
-                android:layout_width="381dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
@@ -250,7 +251,7 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:hint="Bhopal"
+                    android:hint="District"
                     android:inputType="textPersonName"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -260,11 +261,11 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout8"
-                android:layout_width="381dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraintLayout7">
@@ -276,21 +277,21 @@
                     android:text="Address"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/update_profile_address"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:ems="10"
-                    android:hint="Bhopal"
+                    android:hint="Enter Your Address"
                     android:inputType="textPersonName"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt6" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout122"
                 android:layout_width="381dp"
@@ -300,18 +301,7 @@
                 android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout8">
-
-                <TextView
-                    android:id="@+id/txt33"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Update Profile Image"
-                    android:textSize="24sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout8" />
 
             <Button
                 android:id="@+id/update_profile_cancel"

@@ -31,6 +31,11 @@ public class farmer_crop_details extends AppCompatActivity {
         pr_sub_type = findViewById(R.id.detail_crop_sub_type);
         order  =findViewById(R.id.detail_crop_order);
         back = findViewById(R.id.detail_crop_back);
+        Intent intent = getIntent();
+        product_key = intent.getStringExtra("key");
+        product_parent = intent.getStringExtra("main_key");
+        Toast.makeText(this, product_key + product_parent, Toast.LENGTH_SHORT).show();
+        DatabaseReference df = FirebaseDatabase.getInstance().getReference();
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -45,18 +50,15 @@ public class farmer_crop_details extends AppCompatActivity {
         order.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(farmer_crop_details.this,Navigation_Activity_2.class);
+                Intent intent1 = new Intent(farmer_crop_details.this,CustomerOrderActivity.class);
+                intent1.putExtra("key",product_key);
+                intent1.putExtra("main_key",product_parent);
+                startActivity(intent1);
                 finish();
             }
         });
 
 
-
-        Intent intent = getIntent();
-        product_key = intent.getStringExtra("key");
-        product_parent = intent.getStringExtra("main_key");
-        Toast.makeText(this, product_key + product_parent, Toast.LENGTH_SHORT).show();
-        DatabaseReference df = FirebaseDatabase.getInstance().getReference();
 
 
         df.child(product_parent).child(product_key).addListenerForSingleValueEvent(new ValueEventListener() {

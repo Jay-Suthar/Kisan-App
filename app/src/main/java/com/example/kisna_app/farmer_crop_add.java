@@ -33,13 +33,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class farmer_crop_add extends AppCompatActivity {
-    DatabaseReference databaseReference;
-    StorageReference storageReference;
+//    DatabaseReference databaseReference;
+//    StorageReference storageReference;
     public String id;
     public String role;
-    public ImageView img_view_0,img_view_1,img_view_2;
-    public ImageView cropImages[];
-    public Uri cropImagesUri[];
+//    public ImageView img_view_0,img_view_1,img_view_2;
+//    public ImageView cropImages[];
+//    public Uri cropImagesUri[];
     private EditText name,subtype,price,quantity;
     private Button update,back;
     @Override
@@ -64,79 +64,74 @@ public class farmer_crop_add extends AppCompatActivity {
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(allImagesFilled()) {
-                    uploadCropImagesToFirebaseStorage();
                     updatevalues();
                     clear();
-
                     startActivity(new Intent(farmer_crop_add.this,DashboardSellActivity.class));
                     finish();
-                }
-
             }
         });
 
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference();
-        storageReference = FirebaseStorage.getInstance().getReference();
-
-        cropImages = new ImageView[3];
-        cropImages[0] = (ImageView) findViewById(R.id.crp_img_0);
-        cropImages[1] = (ImageView) findViewById(R.id.crp_img_1);
-        cropImages[2] = (ImageView) findViewById(R.id.crp_img_2);
-        cropImagesUri = new Uri[cropImages.length];
-
-        for(int i=0 ; i<cropImages.length ; i++){
-            cropImagesUri[i] = Uri.parse("");
-            int req = 1001+i;
-
-            cropImages[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(openGalleryIntent,req);
-                }
-            });
-        }
+//        databaseReference = FirebaseDatabase.getInstance().getReference();
+//        storageReference = FirebaseStorage.getInstance().getReference();
+//
+//        cropImages = new ImageView[3];
+//        cropImages[0] = (ImageView) findViewById(R.id.crp_img_0);
+//        cropImages[1] = (ImageView) findViewById(R.id.crp_img_1);
+//        cropImages[2] = (ImageView) findViewById(R.id.crp_img_2);
+//        cropImagesUri = new Uri[cropImages.length];
+//
+//        for(int i=0 ; i<cropImages.length ; i++){
+//            cropImagesUri[i] = Uri.parse("");
+//            int req = 1001+i;
+//
+//            cropImages[i].setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Intent openGalleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+//                    startActivityForResult(openGalleryIntent,req);
+//                }
+//            });
+//        }
     }
 
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if(1001<=requestCode && requestCode<(1001+cropImages.length)){
-            if(resultCode == Activity.RESULT_OK){
-                int index = requestCode-1001;
-                String selectedImageviewID = "crp_img_"+Integer.toString(index);
-                int selectedImageviewResourceID = getResources().getIdentifier(selectedImageviewID, "id", getPackageName());
-
-                ImageView selectedCropImage = (ImageView) findViewById(selectedImageviewResourceID);
-
-                Uri uri = data.getData();
-                Log.d("tr", String.valueOf(index));
-                Log.d("sd", String.valueOf(uri));
-
-
-
-
-
-                // TODO
-                // This line of code was making mistake
-                // thejust below was maing it to crash
-//                cropImagesUri[index] = uri;
-
-
-
-
-
-                selectedCropImage.setImageURI(uri);
-            }
-
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if(1001<=requestCode && requestCode<(1001+cropImages.length)){
+//            if(resultCode == Activity.RESULT_OK){
+//                int index = requestCode-1001;
+//                String selectedImageviewID = "crp_img_"+Integer.toString(index);
+//                int selectedImageviewResourceID = getResources().getIdentifier(selectedImageviewID, "id", getPackageName());
+//
+//                ImageView selectedCropImage = (ImageView) findViewById(selectedImageviewResourceID);
+//
+//                Uri uri = data.getData();
+//                Log.d("tr", String.valueOf(index));
+//                Log.d("sd", String.valueOf(uri));
+//
+//
+//
+//
+//
+//                // TODO
+//                // This line of code was making mistake
+//                // thejust below was maing it to crash
+////                cropImagesUri[index] = uri;
+//
+//
+//
+//
+//
+//                selectedCropImage.setImageURI(uri);
+//            }
+//
+//        }
+//    }
 
 
 
@@ -178,60 +173,60 @@ public class farmer_crop_add extends AppCompatActivity {
         price.setText("");
         quantity.setText("");
     }
+//
+//    public boolean allImagesFilled(){
+//        for(int i=0 ; i<cropImagesUri.length ; i++){
+//            if(cropImagesUri[i]==Uri.parse("")){
+//                return false;
+//            }
+//        }
+//
+//        return true;
+//    }
+//
+//    public void uploadCropImagesToFirebaseStorage(){
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        id = user.getUid();
+//
+//
+//        databaseReference.child("User").child(id).child("role").addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                role = snapshot.getValue(String.class);
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Toast.makeText(farmer_crop_add.this, error.toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        Handler scheduler = new Handler();
+//        scheduler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                temp();
+//            }
+//        }, 2000);
+//
+//    }
 
-    public boolean allImagesFilled(){
-        for(int i=0 ; i<cropImagesUri.length ; i++){
-            if(cropImagesUri[i]==Uri.parse("")){
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    public void uploadCropImagesToFirebaseStorage(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        id = user.getUid();
-
-
-        databaseReference.child("User").child(id).child("role").addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                role = snapshot.getValue(String.class);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(farmer_crop_add.this, error.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Handler scheduler = new Handler();
-        scheduler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                temp();
-            }
-        }, 2000);
-
-    }
-
-    public void temp()
-    {
-        String folderPath = "users/"+ role +"/"+id+"/";
-
-        for(int i=0 ; i<cropImages.length ; i++){
-            String imageNamePrefix = "crp_img_";
-            String imageNumber = Integer.toString(i);
-            String path = folderPath + imageNamePrefix + imageNumber + ".jpg";
-            Log.d("pth",path);
-
-            StorageReference cropImageReference = storageReference.child(path);
-            cropImageReference.putFile(cropImagesUri[i]);
-
-            for(int j=0 ; j<cropImagesUri.length ; j++){
-                Log.d("tt", String.valueOf(cropImagesUri[j]));
-            }
-        }
-    }
+//    public void temp()
+//    {
+//        String folderPath = "users/"+ role +"/"+id+"/";
+//
+//        for(int i=0 ; i<cropImages.length ; i++){
+//            String imageNamePrefix = "crp_img_";
+//            String imageNumber = Integer.toString(i);
+//            String path = folderPath + imageNamePrefix + imageNumber + ".jpg";
+//            Log.d("pth",path);
+//
+//            StorageReference cropImageReference = storageReference.child(path);
+//            cropImageReference.putFile(cropImagesUri[i]);
+//
+//            for(int j=0 ; j<cropImagesUri.length ; j++){
+//                Log.d("tt", String.valueOf(cropImagesUri[j]));
+//            }
+//        }
+//    }
 }
