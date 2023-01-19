@@ -35,7 +35,7 @@ public class farmer_product_details extends AppCompatActivity {
         Intent intent = getIntent();
         product_key = intent.getStringExtra("key");
         product_parent = intent.getStringExtra("main_key");
-        Toast.makeText(this, product_key + product_parent, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, product_key + product_parent, Toast.LENGTH_SHORT).show();
         order  =findViewById(R.id.farmer_product_order);
         back = findViewById(R.id.back);
 

@@ -32,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getSupportActionBar().hide();
         Intent intent = getIntent();
         role = intent.getStringExtra("Role");
 //        Toast.makeText(this, role, Toast.LENGTH_SHORT).show();

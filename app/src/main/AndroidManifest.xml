@@ -211,6 +211,7 @@
                 android:value="" />
         </activity>
         <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>

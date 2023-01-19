@@ -38,6 +38,7 @@ public class user_profile_farmer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_profile_farmer);
+        getSupportActionBar().hide();
         name = findViewById(R.id.user_profile_name);
         aadhar = findViewById(R.id.user_profile_aadhar_number);
         role = findViewById(R.id.user_profile_role);

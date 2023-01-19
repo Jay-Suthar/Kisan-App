@@ -50,6 +50,7 @@ public class update_user_profile_farmer extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_user_profile_farmer);
+        getSupportActionBar().hide();
 
         name = findViewById(R.id.update_profile_username);
         name1 = findViewById(R.id.update_profile_fullname);

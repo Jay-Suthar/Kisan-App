@@ -19,7 +19,7 @@ public class RoleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roll);
-
+        getSupportActionBar().hide();
         options = new ConstraintLayout[3];
         options[0] = (ConstraintLayout) findViewById(R.id.cns_role_farmer);
         options[1] = (ConstraintLayout) findViewById(R.id.cns_role_customer);
